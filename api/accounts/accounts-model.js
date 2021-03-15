@@ -1,12 +1,12 @@
 const db = require('../../data/db-config');
 
 const getAll = () => {
-  return db('accounts')
+  return db('accounts');
 }
 
 const getById = id => {
   return db('accounts')
-  .where('id', id)
+  .where('id', id).first();
 }
 
 const create = async account => {
